@@ -1,3 +1,3 @@
 #/bin/sh
-cmake -S /Users/thomashorstink/Projects/p1/p1-meter -B /Users/thomashorstink/Projects/p1/p1-meter/build
-make -C /Users/thomashorstink/Projects/p1/p1-meter/build/
+cmake -S $1 -B $1/build
+make -C $1/build/

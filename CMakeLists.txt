@@ -9,7 +9,4 @@ project(
 )
 
 option(BUILD_TESTS FALSE)
-
-add_subdirectory(CppLinuxSerial)
 add_executable(p1-meter main.cpp)
-target_link_libraries(p1-meter CppLinuxSerial::CppLinuxSerial)

@@ -9,9 +9,7 @@ jobs:
       - name: "build linux"
         run: |
           mkdir build
-          cd build
-          bash -c 'cmake ..'
-          make
+          bash build.sh .
       - name: Upload linux
         uses: actions/upload-artifact@v4
         with:
