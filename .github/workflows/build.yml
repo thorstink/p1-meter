@@ -1,0 +1,20 @@
+name: Build project
+
+on: [push]
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: "build linux"
+        run: |
+          git submodule update --init --recursive
+          mkdir build
+          cd build
+          bash -c 'cmake ..'
+          make
+      - name: Upload linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: P1-meter app
+          path: build/p1-meter
